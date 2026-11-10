@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Wedding of Aditya & Anindya | Undangan Pernikahan</title>
+  
+  <!-- Meta SEO & Social Sharing -->
+  <meta name="description" content="Undangan Pernikahan Digital Aditya Pratama & Anindya Kirana. Sabtu, 24 Oktober 2026.">
+  <meta property="og:title" content="The Wedding of Aditya & Anindya">
+  <meta property="og:description" content="Kami mengundang Anda untuk merayakan hari bahagia pernikahan kami.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+  <meta name="theme-color" content="#FAF8F5">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="lock-scroll">
+
+  <!-- ==================== A. OPENING / COVER OVERLAY ==================== -->
+  <div id="cover-overlay" class="cover-screen">
+    <div class="cover-bg"></div>
+    <div class="cover-overlay-gradient"></div>
+    <div class="cover-ornament-top">
+      <svg viewBox="0 0 100 24" class="svg-botanical" aria-hidden="true">
+        <path d="M50 2 C 40 10, 30 18, 10 18 M50 2 C 60 10, 70 18, 90 18 M50 2 L50 22 M44 8 C 38 7, 34 11, 32 14 M56 8 C 62 7, 66 11, 68 14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="cover-content text-center">
+      <p class="cover-subtitle tracking-widest text-uppercase">The Wedding Of</p>
+      <h1 class="cover-title">Aditya & Anindya</h1>
+      <p class="cover-date"><span class="line-ornament"></span> 24 . 10 . 2026 <span class="line-ornament"></span></p>
+
+      <div class="guest-card">
+        <span class="guest-salutation">Kepada Yth. Bapak/Ibu/Saudara/i:</span>
+        <h2 id="guest-name" class="guest-name">Tamu Undangan</h2>
+        <span class="guest-badge">Spesial Invitation</span>
+      </div>
+
+      <button id="btn-open-invitation" class="btn-open-invitation" aria-label="Buka Undangan">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </span>
+        <span class="btn-text">Buka Undangan</span>
+      </button>
+
+      <div class="cover-note">
+        <small>*Mohon aktifkan audio untuk pengalaman yang lebih hangat</small>
+      </div>
+    </div>
+
+    <div class="cover-ornament-bottom">
+      <svg viewBox="0 0 100 24" class="svg-botanical flipped" aria-hidden="true">
+        <path d="M50 2 C 40 10, 30 18, 10 18 M50 2 C 60 10, 70 18, 90 18 M50 2 L50 22 M44 8 C 38 7, 34 11, 32 14 M56 8 C 62 7, 66 11, 68 14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
+  <main id="main-content" class="main-wrapper">
+
+    <!-- FLOATING AUDIO CONTROL -->
+    <div id="audio-container" class="audio-control-wrapper" style="display: none;">
+      <button id="btn-music-toggle" class="btn-music-disc" aria-label="Putar / Hentikan Musik" title="Musik Latar">
+        <div class="disc-vinyl">
+          <div class="disc-center"></div>
+        </div>
+        <div class="music-wave-bars">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+      <audio id="wedding-audio" loop preload="auto">
+        <source src="assets/music/wedding-song.wav" type="audio/wav">
+        <source src="assets/music/wedding-song.ogg" type="audio/ogg">
+        <source src="https://actions.google.com/sounds/v1/ambient/relaxing_music.ogg" type="audio/ogg">
+      </audio>
+    </div>
+
+    <!-- FLOATING BOTTOM NAVIGATION (Mobile-friendly Pill Bar) -->
+    <nav id="bottom-nav" class="bottom-nav" aria-label="Navigasi Halaman" style="display: none;">
+      <a href="#hero" class="nav-item active" data-section="hero" aria-label="Beranda">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="#couple" class="nav-item" data-section="couple" aria-label="Mempelai">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <span>Couple</span>
+      </a>
+      <a href="#event" class="nav-item" data-section="event" aria-label="Acara">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Acara</span>
+      </a>
+      <a href="#story" class="nav-item" data-section="story" aria-label="Kisah Cinta">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Story</span>
+      </a>
+      <a href="#gallery" class="nav-item" data-section="gallery" aria-label="Galeri">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Galeri</span>
+      </a>
+      <a href="#rsvp" class="nav-item" data-section="rsvp" aria-label="RSVP & Ucapan">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <span>RSVP</span>
+      </a>
+    </nav>
+
+    <!-- ==================== B. HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-badge reveal-fade">Walimatul 'Ursy</div>
+        <p class="hero-subheading reveal-fade">The Wedding Celebration Of</p>
+        <h1 class="hero-couple-title reveal-fade">Aditya & Anindya</h1>
+
+        <div class="hero-photo-wrapper reveal-scale">
+          <div class="hero-frame-border"></div>
+          <div class="hero-image-box">
+            <img 
+              src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80" 
+              alt="Aditya and Anindya Wedding" 
+              class="hero-img"
+              loading="eager"
+            >
+          </div>
+          <div class="hero-floating-decor decor-top-right">
+            <svg viewBox="0 0 60 60" width="50" height="50" fill="none" stroke="currentColor">
+              <path d="M10 50 C 20 25, 40 15, 55 10 M30 35 C 42 28, 48 20, 52 14 M20 42 C 30 38, 40 32, 45 25" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero-date-box reveal-fade">
+          <p class="hero-date-text">Sabtu, 24 Oktober 2026</p>
+          <span class="hero-city-text">Jakarta Selatan, DKI Jakarta</span>
+        </div>
+
+        <div class="scroll-prompt reveal-fade">
+          <span class="scroll-text">Gulir ke bawah</span>
+          <div class="scroll-mouse">
+            <span class="scroll-wheel"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INSPIRATIONAL QUOTE SECTION ==================== -->
+    <section class="quote-section">
+      <div class="container text-center">
+        <div class="quote-box reveal-fade">
+          <div class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+          <blockquote class="quote-passage">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+          </blockquote>
+          <cite class="quote-source">— QS. Ar-Rum: 21 —</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== C. COUPLE SECTION ==================== -->
+    <section id="couple" class="couple-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Mempelai Bahagia</span>
+          <h2 class="section-title">Groom & Bride</h2>
+          <div class="divider-gold">
+            <span class="leaf-left"></span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span class="leaf-right"></span>
+          </div>
+          <p class="section-description">
+            Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami bermaksud menyelenggarakan syukuran pernikahan putra-putri kami:
+          </p>
+        </div>
+
+        <div class="couple-grid">
+          <!-- GROOM -->
+          <div class="couple-card reveal-left">
+            <div class="couple-photo-frame">
+              <div class="photo-arch">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" 
+                  alt="Aditya Pratama" 
+                  class="couple-img"
+                  loading="lazy"
+                >
+              </div>
+              <div class="arch-gold-outline"></div>
+            </div>
+            <div class="couple-info text-center">
+              <h3 class="couple-name">Aditya Pratama, S.T.</h3>
+              <p class="couple-role">The Groom</p>
+              <p class="couple-parents">
+                Putra pertama dari pasangan<br>
+                <strong>Bpk. Bambang Sutrisno</strong><br>&amp; <strong>Ibu Siti Rahayu</strong>
+              </p>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram Aditya">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <span>@adityapratama</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- MONOGRAM AMPERSAND -->
+          <div class="couple-center-monogram reveal-scale">
+            <div class="monogram-circle">
+              <span class="ampersand">&amp;</span>
+            </div>
+          </div>
+
+          <!-- BRIDE -->
+          <div class="couple-card reveal-right">
+            <div class="couple-photo-frame">
+              <div class="photo-arch">
+                <img 
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" 
+                  alt="Anindya Kirana" 
+                  class="couple-img"
+                  loading="lazy"
+                >
+              </div>
+              <div class="arch-gold-outline"></div>
+            </div>
+            <div class="couple-info text-center">
+              <h3 class="couple-name">Anindya Kirana, S.I.Kom.</h3>
+              <p class="couple-role">The Bride</p>
+              <p class="couple-parents">
+                Putri kedua dari pasangan<br>
+                <strong>Bpk. Hendra Gunawan</strong><br>&amp; <strong>Ibu Ratna Dewi</strong>
+              </p>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram Anindya">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <span>@anindyakirana</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== D. WEDDING EVENT SECTION ==================== -->
+    <section id="event" class="event-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Waktu & Tempat</span>
+          <h2 class="section-title">Rangkaian Acara</h2>
+          <div class="divider-gold">
+            <span class="leaf-left"></span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <span class="leaf-right"></span>
+          </div>
+          <p class="section-description">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+          </p>
+        </div>
+
+        <div class="events-grid">
+          <!-- CARD 1: AKAD NIKAH -->
+          <div class="event-card reveal-left">
+            <div class="event-card-inner">
+              <div class="event-header-icon">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 21a9 9 0 100-18 9 9 0 000 18z"/>
+                  <path d="M8 12l3 3 5-5"/>
+                </svg>
+              </div>
+              <h3 class="event-title">Akad Nikah</h3>
+              <p class="event-date-badge">Sabtu, 24 Oktober 2026</p>
+              
+              <div class="event-details">
+                <div class="event-detail-item">
+                  <div class="item-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div>
+                    <strong>Pukul:</strong>
+                    <p>08.00 - 10.00 WIB</p>
+                  </div>
+                </div>
+
+                <div class="event-detail-item">
+                  <div class="item-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <strong>Tempat:</strong>
+                    <p class="venue-name">Masjid Agung Al-Azhar</p>
+                    <p class="venue-address">Jl. Sisingamangaraja No. 1, Selong, Kebayoran Baru, Jakarta Selatan</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-actions">
+                <a 
+                  href="https://maps.google.com/?q=Masjid+Agung+Al-Azhar+Kebayoran+Baru+Jakarta" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-primary-outline"
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                  <span>Lihat Lokasi</span>
+                </a>
+                <button class="btn-secondary-link add-calendar-btn" data-title="Akad Nikah Aditya & Anindya" data-start="20261024T080000" data-end="20261024T100000" data-location="Masjid Agung Al-Azhar Jakarta Selatan">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <span>Simpan ke Kalender</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2: RESEPSI -->
+          <div class="event-card featured-event reveal-right">
+            <div class="event-ribbon">Acara Utama</div>
+            <div class="event-card-inner">
+              <div class="event-header-icon">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M8 21h8M12 17v4M17 4h3a2 2 0 012 2v2a5 5 0 01-5 5h-1a7 7 0 01-8 0H7a5 5 0 01-5-5V6a2 2 0 012-2h3"/>
+                </svg>
+              </div>
+              <h3 class="event-title">Resepsi Pernikahan</h3>
+              <p class="event-date-badge">Sabtu, 24 Oktober 2026</p>
+              
+              <div class="event-details">
+                <div class="event-detail-item">
+                  <div class="item-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div>
+                    <strong>Pukul:</strong>
+                    <p>11.00 - 14.00 WIB</p>
+                  </div>
+                </div>
+
+                <div class="event-detail-item">
+                  <div class="item-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <strong>Tempat:</strong>
+                    <p class="venue-name">The Glass House Ballroom</p>
+                    <p class="venue-address">Plataran Cilandak, Jl. Durian No. 26, Jagakarsa, Jakarta Selatan</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-actions">
+                <a 
+                  href="https://maps.google.com/?q=Plataran+Cilandak+Jakarta+Selatan" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-primary-outline"
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                  <span>Lihat Lokasi</span>
+                </a>
+                <button class="btn-secondary-link add-calendar-btn" data-title="Resepsi Pernikahan Aditya & Anindya" data-start="20261024T110000" data-end="20261024T140000" data-location="The Glass House Ballroom, Plataran Cilandak">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <span>Simpan ke Kalender</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== E. COUNTDOWN SECTION ==================== -->
+    <section id="countdown" class="countdown-section">
+      <div class="countdown-overlay"></div>
+      <div class="container text-center countdown-content reveal-fade">
+        <span class="countdown-tag">Counting Down The Days</span>
+        <h2 class="countdown-title">Menuju Hari Bahagia</h2>
+        <p class="countdown-subtitle">Sabtu, 24 Oktober 2026</p>
+
+        <div class="timer-grid" id="timer-grid">
+          <div class="timer-box">
+            <span class="timer-number" id="days">00</span>
+            <span class="timer-label">Hari</span>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-box">
+            <span class="timer-number" id="hours">00</span>
+            <span class="timer-label">Jam</span>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-box">
+            <span class="timer-number" id="minutes">00</span>
+            <span class="timer-label">Menit</span>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-box">
+            <span class="timer-number" id="seconds">00</span>
+            <span class="timer-label">Detik</span>
+          </div>
+        </div>
+
+        <div class="countdown-message" id="countdown-status">
+          Semoga setiap langkah kami senantiasa diberkahi oleh-Nya.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== F. LOVE STORY SECTION ==================== -->
+    <section id="story" class="story-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Perjalanan Kami</span>
+          <h2 class="section-title">Love Story</h2>
+          <div class="divider-gold">
+            <span class="leaf-left"></span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span class="leaf-right"></span>
+          </div>
+          <p class="section-description">
+            Setiap kisah cinta itu indah, namun kisah cinta kami adalah yang paling kami syukuri.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- STORY 1 -->
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">September 2021</span>
+              <h3 class="timeline-title">Pertemuan Pertama</h3>
+              <p class="timeline-desc">
+                Pertama kali bertemu dalam sebuah proyek kolaborasi kampus di Jakarta. Berawal dari diskusi formal, percakapan kami mengalir menjadi obrolan hangat yang tak pernah usai.
+              </p>
+            </div>
+          </div>
+
+          <!-- STORY 2 -->
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">Juni 2022</span>
+              <h3 class="timeline-title">Memulai Hubungan</h3>
+              <p class="timeline-desc">
+                Setelah saling mengenal karakter, impian, dan prinsip hidup, kami sepakat untuk berjalan bersama saling mendukung dalam setiap cita-cita dan kedewasaan.
+              </p>
+            </div>
+          </div>
+
+          <!-- STORY 3 -->
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M12 14v8M9 19h6"/></svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">Desember 2025</span>
+              <h3 class="timeline-title">Lamaran & Ikatan Janji</h3>
+              <p class="timeline-desc">
+                Dikelilingi oleh keluarga besar dan doa dari kedua orang tua kami yang tercinta, Aditya secara resmi melamar Anindya untuk melangkah ke jenjang pernikahan.
+              </p>
+            </div>
+          </div>
+
+          <!-- STORY 4 -->
+          <div class="timeline-item reveal-right">
+            <div class="timeline-dot">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">24 Oktober 2026</span>
+              <h3 class="timeline-title">Hari Pernikahan</h3>
+              <p class="timeline-desc">
+                Awal dari lembaran baru perjalanan hidup kami sebagai pasangan suami istri, menyatukan cinta dalam ikatan suci yang abadi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== G. GALLERY SECTION ==================== -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Momen Bahagia</span>
+          <h2 class="section-title">Galeri Prewedding</h2>
+          <div class="divider-gold">
+            <span class="leaf-left"></span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span class="leaf-right"></span>
+          </div>
+          <p class="section-description">
+            Beberapa potret kebersamaan kami yang diabadikan dalam bingkai cinta dan kehangatan.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Gallery Item 1 -->
+          <div class="gallery-item reveal-scale" data-src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85" data-caption="Cinta yang bertumbuh dalam kehangatan senja">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Prewedding Aditya & Anindya 1" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <p class="gallery-caption-preview">Cinta Dalam Kehangatan</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="gallery-item reveal-scale" data-src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85" data-caption="Sentuhan tangan yang saling menguatkan langkah">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Prewedding Aditya & Anindya 2" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <p class="gallery-caption-preview">Saling Menguatkan</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="gallery-item reveal-scale" data-src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=85" data-caption="Senyuman yang selalu menjadi tempat kembali pulang">
+            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" alt="Prewedding Aditya & Anindya 3" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <p class="gallery-caption-preview">Senyuman Hangat</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="gallery-item reveal-scale" data-src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1200&q=85" data-caption="Janji suci di hadapan sang waktu">
+            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=600&q=80" alt="Prewedding Aditya & Anindya 4" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <p class="gallery-caption-preview">Ikatan Janji Suci</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="gallery-item reveal-scale" data-src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=85" data-caption="Menatap masa depan dengan keyakinan penuh">
+            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&q=80" alt="Prewedding Aditya & Anindya 5" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <p class="gallery-caption-preview">Menatap Masa Depan</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="gallery-item reveal-scale" data-src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1200&q=85" data-caption="Keindahan dalam kesederhanaan cinta">
+            <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=600&q=80" alt="Prewedding Aditya & Anindya 6" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <p class="gallery-caption-preview">Keseruan Bersama</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau Foto">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Tutup Galeri">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Foto Sebelumnya">&#10094;</button>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Foto Berikutnya">&#10095;</button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Pratinjau Galeri">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+      </div>
+    </div>
+
+    <!-- ==================== WEDDING GIFT / TANDA KASIH SECTION ==================== -->
+    <section class="gift-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Tanda Kasih</span>
+          <h2 class="section-title">Wedding Gift</h2>
+          <div class="divider-gold">
+            <span class="leaf-left"></span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7M7.5 8a2.5 2.5 0 010-5A4.8 8 0 0112 8a4.8 8 0 014.5-5 2.5 2.5 0 010 5"/></svg>
+            <span class="leaf-right"></span>
+          </div>
+          <p class="section-description">
+            Doa restu Anda merupakan karunia yang paling berarti bagi kami. Namun jika Anda bermaksud memberikan tanda kasih, Anda dapat mengirimkannya melalui:
+          </p>
+        </div>
+
+        <div class="gift-cards-grid">
+          <!-- Bank BCA -->
+          <div class="gift-card reveal-left">
+            <div class="gift-card-badge">Bank Transfer</div>
+            <div class="bank-logo-text">BCA</div>
+            <div class="account-number" id="acc-bca">8831 2940 551</div>
+            <p class="account-holder">a.n Aditya Pratama</p>
+            <button class="btn-copy" data-target="acc-bca" aria-label="Salin nomor rekening BCA">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              <span>Salin Rekening</span>
+            </button>
+          </div>
+
+          <!-- Bank Mandiri -->
+          <div class="gift-card reveal-right">
+            <div class="gift-card-badge">Bank Transfer</div>
+            <div class="bank-logo-text">Mandiri</div>
+            <div class="account-number" id="acc-mandiri">1370 0214 9882 1</div>
+            <p class="account-holder">a.n Anindya Kirana</p>
+            <button class="btn-copy" data-target="acc-mandiri" aria-label="Salin nomor rekening Mandiri">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              <span>Salin Rekening</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== H. RSVP & WISHES SECTION ==================== -->
+    <section id="rsvp" class="rsvp-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Konfirmasi Kehadiran</span>
+          <h2 class="section-title">RSVP &amp; Doa Restu</h2>
+          <div class="divider-gold">
+            <span class="leaf-left"></span>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <span class="leaf-right"></span>
+          </div>
+          <p class="section-description">
+            Mohon konfirmasi kehadiran Anda demi kelancaran acara resepsi pernikahan kami.
+          </p>
+        </div>
+
+        <div class="rsvp-container">
+          <!-- FORM RSVP -->
+          <div class="rsvp-card reveal-scale">
+            <form id="rsvp-form" class="rsvp-form" novalidate>
+              <div class="form-group">
+                <label for="rsvp-name">Nama Lengkap <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="rsvp-name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+                  <span class="input-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </span>
+                </div>
+                <div class="error-msg" id="name-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label>Konfirmasi Kehadiran <span class="required">*</span></label>
+                <div class="radio-pill-group">
+                  <label class="radio-pill">
+                    <input type="radio" name="attendance" value="Hadir" checked>
+                    <span class="pill-badge">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                      Hadir
+                    </span>
+                  </label>
+                  <label class="radio-pill">
+                    <input type="radio" name="attendance" value="Tidak Hadir">
+                    <span class="pill-badge">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                      Tidak Hadir
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group" id="guests-count-group">
+                <label for="rsvp-guests">Jumlah Tamu yang Hadir</label>
+                <select id="rsvp-guests" name="guests" class="form-select">
+                  <option value="1">1 Orang</option>
+                  <option value="2">2 Orang</option>
+                  <option value="3">3 Orang</option>
+                  <option value="4">4 Orang</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="rsvp-message">Ucapan & Doa Restu <span class="required">*</span></label>
+                <textarea id="rsvp-message" name="message" rows="4" placeholder="Tuliskan doa dan ucapan hangat untuk kedua mempelai..." required></textarea>
+                <div class="error-msg" id="message-error"></div>
+              </div>
+
+              <button type="submit" id="btn-submit-rsvp" class="btn-submit">
+                <span class="btn-text">Kirim Konfirmasi & Doa</span>
+                <span class="btn-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </span>
+              </button>
+            </form>
+          </div>
+
+          <!-- WISHES FEED DISPLAY -->
+          <div class="wishes-box reveal-scale">
+            <div class="wishes-header">
+              <h3 class="wishes-title">
+                <span>Ucapan & Doa Restu</span>
+                <span class="wishes-count" id="wishes-count">0</span>
+              </h3>
+            </div>
+            <div class="wishes-list" id="wishes-list" tabindex="0" role="region" aria-label="Daftar ucapan para tamu">
+              <!-- Dynamically populated from localStorage -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== I. CLOSING SECTION ==================== -->
+    <section class="closing-section">
+      <div class="closing-bg"></div>
+      <div class="closing-overlay-gradient"></div>
+      <div class="container text-center closing-content reveal-fade">
+        <div class="closing-floral-decor">
+          <svg viewBox="0 0 100 24" class="svg-botanical" aria-hidden="true">
+            <path d="M50 2 C 40 10, 30 18, 10 18 M50 2 C 60 10, 70 18, 90 18 M50 2 L50 22 M44 8 C 38 7, 34 11, 32 14 M56 8 C 62 7, 66 11, 68 14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <p class="closing-quote">
+          "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu bagi lembaran baru hidup kami."
+        </p>
+
+        <p class="closing-thanks">Atas kehadiran dan doa restunya, kami ucapkan terima kasih yang sebesar-besarnya.</p>
+
+        <div class="closing-signature">
+          <span class="family-tag">Kami yang berbahagia,</span>
+          <h2 class="closing-names">Aditya & Anindya</h2>
+          <p class="closing-families">Beserta Keluarga Besar Kedua Mempelai</p>
+        </div>
+
+        <footer class="site-footer">
+          <p class="copyright">&copy; 2026 The Wedding of Aditya & Anindya. All Rights Reserved.</p>
+          <p class="crafted-with">Created with Love & Elegance</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast-notification" role="alert" aria-live="assertive"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
